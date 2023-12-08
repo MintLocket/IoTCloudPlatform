@@ -35,7 +35,7 @@ public class ChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acticity_chart);
 
-        //1. url 셋팅 -> 처음 화면은 trashCanA로 띄워주기로 함
+        //1. url 셋팅 -> 처음 화면은 키오스크A로 띄워주기로 함
         Intent intent = getIntent();
         getLogsURL = intent.getStringExtra("getLogsURL");
         tmpUrlStr = getLogsURL; //메인에서 온 url이 변형되는것을 방지하기 위해 tmp에 저장
