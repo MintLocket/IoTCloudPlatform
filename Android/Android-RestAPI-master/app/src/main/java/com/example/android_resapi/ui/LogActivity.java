@@ -34,8 +34,10 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_log);
+        /*로그 조회 버튼을 클릭하면 자동으로 키오스크 A의 로그가 1970.01.01 부터 현재까지 띄워지고
+          키오스크 버튼을 누르고 날짜 및 시간 선택 후 조회 버튼을 누르면 해당 기간의 로그를 볼 수 있게 하였다*/
 
-        //1. url 셋팅 -> 처음 화면은 trashCanA로 띄워주기로 함
+        //1. url 셋팅 -> 처음 화면은 키오스크 A로 띄워주기로 함
         Intent intent = getIntent();
         getLogsURL = intent.getStringExtra("getLogsURL");
         tmpUrlStr = getLogsURL; //메인에서 온 url이 변형되는것을 방지하기 위해 tmp에 저장
