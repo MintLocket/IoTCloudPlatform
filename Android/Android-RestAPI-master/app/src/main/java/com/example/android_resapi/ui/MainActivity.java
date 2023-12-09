@@ -21,18 +21,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        //사용자가 url 주입하지 않고도 버튼 클릭 이벤트 발생시 화면 이동하면서 인텐트로 url을 넘겨주게끔 수정함
+
         listThingsURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices";
         thingShadowURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices/";
         getLogsURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices/";
 
-        //디바이스 조회 버튼 클릭 이벤트 정의
+        //사용자가 url을 직접 입력하지 않고도, 버튼 이벤트 발생시에 액티비티로 넘어갈 때 인텐트로 url을 넘겨주도록 수정함.
+        //디바이스 조회 버튼 클릭 이벤트 정의 
         Button listThingsBtn = findViewById(R.id.listThingsBtn);
         listThingsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListThingsActivity.class);
-          릭 이벤트 정의
+                intent.putExtra("listThingsURL", listThingsURL);
+                startActivity(intent);
+            }
+        });
+
+        //디바이스 최신 상태 조회 버튼 클릭 이벤트 정의
+        Button thingShadowBtn = findViewById(R.id.thingShadowBtn);
+        thingShadowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DeviceActivity.class);
+                intent.putExtra("thingShadowURL", thingShadowURL);
+                startActivity(intent);
+            }
+        });
+
+        //디바이스 로그 조회 버튼 클릭 이벤트 조회
         Button listLogsBtn = findViewById(R.id.listLogsBtn);
         listLogsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,5 +71,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-
-
