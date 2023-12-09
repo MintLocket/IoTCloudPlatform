@@ -15,4 +15,4 @@
 
 ## 시연 영상
 
-https://youtu.be/6P8XZ3H33dM
+[[https://www.youtube.com/watch?v=NvDZqqAZRXI](https://youtu.be/NvDZqqAZRXI)](https://youtu.be/NvDZqqAZRXI)https://youtu.be/NvDZqqAZRXI
