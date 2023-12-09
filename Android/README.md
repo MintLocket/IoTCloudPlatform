@@ -14,3 +14,9 @@
      * LogActivity - 디바이스 A, B의 로그들을 사용자 클릭 이벤트에 따라 띄워주는 역할을 수행합니다. 
      * MainActivity - 메인 화면으로 목록 조회, 상태 조회, 로그 조회, 차트 보기 버튼을 띄우는 역할을 수행합니다.
 2. ### 앱 화면
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/9476968d-facd-415e-acfd-ba541c77cdf4"></image>
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/5ece1255-919a-4618-b877-48e241b2df3b"></image>
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/ae478bca-0d22-4c8a-a300-9b38b9beb337"></image>
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/4240bbf7-7e86-4152-a03d-628e9dc5a66b"></image>
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/35858d9f-5bc6-4f91-b63c-3a268db9100f"></image>
+<image height="600" weight="250" src="https://github.com/MintLocket/IoTCloudPlatform/assets/123307856/58172f4c-0614-4906-903d-67b8122d64e3"></image>
