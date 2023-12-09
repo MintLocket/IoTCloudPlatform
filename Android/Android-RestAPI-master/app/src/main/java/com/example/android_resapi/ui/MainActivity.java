@@ -21,69 +21,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
+        //사용자가 url 주입하지 않고도 버튼 클릭 이벤트 발생시 화면 이동하면서 인텐트로 url을 넘겨주게끔 수정함
         listThingsURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices";
         thingShadowURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices/";
         getLogsURL = "https://b04a2ls0h4.execute-api.ap-southeast-2.amazonaws.com/prod/devices/";
 
+        //디바이스 조회 버튼 클릭 이벤트 정의
         Button listThingsBtn = findViewById(R.id.listThingsBtn);
         listThingsBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String urlstr = listThingsURL;
-                Log.i(TAG, "listThingsURL=" + urlstr);
-                if (urlstr == null || urlstr.equals("")) {
-                    Toast.makeText(MainActivity.this, "사물목록 조회 API URI 입력이 필요합니다.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 Intent intent = new Intent(MainActivity.this, ListThingsActivity.class);
-                intent.putExtra("listThingsURL", listThingsURL);
-                startActivity(intent);
-                //  new GetThings(MainActivity.this).execute();
-                //  new GetThingShadow(MainActivity.this, "MyMKRWiFi1010").execute();
-
-            }
-        });
-
-        Button thingShadowBtn = findViewById(R.id.thingShadowBtn);
-        thingShadowBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String urlstr = thingShadowURL;
-                if (urlstr == null || urlstr.equals("")) {
-                    Toast.makeText(MainActivity.this, "사물상태 조회/변경 API URI 입력이 필요합니다.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                Intent intent = new Intent(MainActivity.this, DeviceActivity.class);
-                intent.putExtra("thingShadowURL", thingShadowURL);
-                startActivity(intent);
-
-            }
-        });
-
+          릭 이벤트 정의
         Button listLogsBtn = findViewById(R.id.listLogsBtn);
         listLogsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String urlstr = getLogsURL;
-                if (urlstr == null || urlstr.equals("")) {
-                    Toast.makeText(MainActivity.this, "사물로그 조회 API URI 입력이 필요합니다.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 Intent intent = new Intent(MainActivity.this, LogActivity.class);
                 intent.putExtra("getLogsURL", getLogsURL);
                 startActivity(intent);
             }
         });
 
+        //차트 보기 버튼 클릭 이벤트 정의
         Button chartBtn = findViewById(R.id.listChart);
         chartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String urlstr = getLogsURL;
-                if (urlstr == null || urlstr.equals("")) {
-                    Toast.makeText(MainActivity.this, "사물로그 조회 API URI 입력이 필요합니다.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 Intent intent = new Intent(MainActivity.this, ChartActivity.class);
                 intent.putExtra("getLogsURL", getLogsURL);
                 startActivity(intent);
