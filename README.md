@@ -12,3 +12,7 @@
 ![1](https://github.com/MintLocket/IoTCloudPlatform/assets/150128897/02f9b4cc-ccbb-42a6-9d5c-080da80d853e)
 
 ![2](https://github.com/MintLocket/IoTCloudPlatform/assets/150128897/446d1cb7-1038-4f43-bf88-39559488f5f4)
+
+## 시연 영상
+
+https://youtu.be/6P8XZ3H33dM
